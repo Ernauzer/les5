@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS triangle</title>
+</head>
+<body>
+
+    <script>
+        var lines = +prompt("Введи кол-во символов");
+        var symbol = prompt("Введи символ " + " *");
+        var result = "";
+        for (var i = 1;i < lines;i++ ) {
+            var spaces = " ".repeat(lines - i);
+            result += spaces + symbol.repeat(i + i - 1) + "\n"; 
+        } 
+        if ( lines <= 3 ) {
+            alert("Введи больше строк,так себе елочка. " + " Больше 3.");
+        } 
+        else {
+            alert(result);
+        }
+    </script>
+</body>
+</html>
