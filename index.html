@@ -9,19 +9,19 @@
 <body>
 
     <script>
-        var lines = +prompt("Введи кол-во символов");
-        var symbol = prompt("Введи символ " + " *");
+        var lines = +prompt("Введите кол-во строк");
+        var symbol = prompt("Введите символ ","*");
         var result = "";
-        for (var i = 1;i < lines;i++ ) {
-            var spaces = " ".repeat(lines - i);
-            result += spaces + symbol.repeat(i + i - 1) + "\n"; 
-        } 
         if ( lines <= 3 ) {
-            alert("Введи больше строк,так себе елочка. " + " Больше 3.");
+            alert("Введи больше строк, так себе елочка. " + " Больше 3.");
         } 
         else {
-            alert(result);
-        }
+            for (var i = 1;i < lines;i++ ) {
+            var spaces = " ".repeat(lines - i);
+            result += spaces + symbol.repeat(i + i - 1) + "\n"; 
+            }
+            alert(result); 
+        } 
     </script>
 </body>
 </html>
